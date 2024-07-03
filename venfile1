@@ -18,3 +18,4 @@ and aia.invoice_id = aila.invoice_id
 and aps.vendor_id = apsa.vendor_id
 and aps.vendor_name=apsa.vendor_name
 and aps.vendor_type=apsa.vendor_type
+and apd.vengor_type=aps.vendor_type
