@@ -1,0 +1,18 @@
+select aia.invoice_num,
+aia.invoice_amount,
+aia.amount_paid,
+aila.item_description,
+aps.vendor_name,
+apsa.vendor_id,
+apsa.vendor_site_code
+from ap_invoices_all aia,
+ap_invoice_lines_all aila,
+ap_suppliers aps,
+ap_supplier_sites_all apsa,
+ap_invoices_all aia,
+ap_invoice_lines_all aila,
+ap_suppliers aps,
+ap_supplier_sites_all apsa
+where ROWNUM < 51 
+and aia.invoice_id = aila.invoice_id
+and aps.vendor_id = apsa.vendor_id
